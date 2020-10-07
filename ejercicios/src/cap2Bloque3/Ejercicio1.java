@@ -1,5 +1,7 @@
 package cap2Bloque3;
 
+import javax.swing.JOptionPane;
+
 public class Ejercicio1{
 
 	/**
@@ -12,22 +14,36 @@ public class Ejercicio1{
 	}
 
 	public static void notas() {
-		int nota = 5;
+		String var = JOptionPane.showInputDialog("Introduzca la nota de tu asignatura: "); // Obtenemos valor para los calculos necesarios
+		int num = Integer.parseInt(var); // Convertimos en entero
+		int nota = Math.round(num);
         String notas;
         
         // Obtendremos los datos y crearemos una variable la cual la utilizaremos para las notas
         switch (nota) 
         {
+            case 0:  notas = "Insuficiente";
+                     break;
             case 1:  notas = "Insuficiente";
+            		break;
+            case 2:  notas = "Insuficiente";
+    				break;
+            case 3:  notas = "Insuficiente";
+    				break;
+            case 4:  notas = "Insuficiente";
+    				break;
+            case 5:  notas = "Suficiente";
                      break;
-            case 2:  notas = "Suficiente";
+            case 6:  notas = "Bien";
                      break;
-            case 3:  notas = "Bien";
+            case 7:  notas = "Notable";
                      break;
-            case 4:  notas = "Notable";
+            case 8:  notas = "Notable";
+            		 break;
+            case 9:  notas = "Sobresaliente";
                      break;
-            case 5:  notas = "Sobresaliente";
-                     break;
+            case 10:  notas = "Sobresaliente";
+            		 break;
             default: notas = "Nota invalida";
                      break;
         }
