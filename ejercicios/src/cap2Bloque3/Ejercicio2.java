@@ -10,7 +10,7 @@ public class Ejercicio2{
 	 */
 	
 	public static void main(String args[]) {
-		calculadora(); // Llamamos a nuestro método para hacer el calculo del area de un circulo.
+		calculadora(); // Llamamos a nuestro método para utilizar la calculadora
 	}
 
 	public static void calculadora() {

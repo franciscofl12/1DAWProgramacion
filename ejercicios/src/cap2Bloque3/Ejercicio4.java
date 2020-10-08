@@ -10,7 +10,7 @@ public class Ejercicio4{
 	 */
 	
 	public static void main(String args[]) {
-		cambio(); // Llamamos a nuestro método para hacer el calculo del area de un circulo.
+		cambio(); // Llamamos a nuestro método para hacer el cambio de monedas
 	}
 
 	public static void cambio() {
@@ -23,8 +23,7 @@ public class Ejercicio4{
         double [] devolver={0,0,0,0,0,}; // Creamos un array que guarde las monedas que se utilizan (tienen que ser la mismas que hay en monedas)
  
        
-        for(int i=0;i<monedas.length;i++) // Pasamos por todas las monedas
-        {     
+        for(int i=0;i<monedas.length;i++){  // Pasamos por todas las monedas    
             if(importe>=monedas[i]) // Comprobamos que el importe sea mayor a cada moneda
             {    
                 devolver[i]=Math.floor(importe/monedas[i]); // Guardaremos la cantidad de monedas que tenemos para seguir anadiendo a cada grupo

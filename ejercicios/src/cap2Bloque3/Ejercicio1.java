@@ -10,7 +10,7 @@ public class Ejercicio1{
 	 */
 	
 	public static void main(String args[]) {
-		notas(); // Llamamos a nuestro método para hacer el calculo del area de un circulo.
+		notas(); // Llamamos a nuestro método para hacer el calculo de las notas
 	}
 
 	public static void notas() {
@@ -22,26 +22,20 @@ public class Ejercicio1{
         // Obtendremos los datos y crearemos una variable la cual la utilizaremos para las notas
         switch (nota) 
         {
-            case 0:  notas = "Insuficiente";
-                     break;
-            case 1:  notas = "Insuficiente";
-            		break;
-            case 2:  notas = "Insuficiente";
-    				break;
-            case 3:  notas = "Insuficiente";
-    				break;
+            case 0:
+            case 1:
+            case 2:
+            case 3:  
             case 4:  notas = "Insuficiente";
     				break;
             case 5:  notas = "Suficiente";
                      break;
             case 6:  notas = "Bien";
                      break;
-            case 7:  notas = "Notable";
-                     break;
+            case 7:
             case 8:  notas = "Notable";
             		 break;
-            case 9:  notas = "Sobresaliente";
-                     break;
+            case 9:
             case 10:  notas = "Sobresaliente";
             		 break;
             default: notas = "Nota invalida";
