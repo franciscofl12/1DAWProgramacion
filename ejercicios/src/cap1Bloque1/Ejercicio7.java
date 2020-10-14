@@ -19,8 +19,5 @@ public class Ejercicio7{
 		int num = Integer.parseInt(var);
 		int num2 = ((~num) + 1);
 		System.out.println("El numreo con calculo a dos es: " + num2);
-		
-		
-		
 	}
 	}

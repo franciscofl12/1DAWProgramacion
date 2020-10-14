@@ -1,7 +1,5 @@
 package cap5Bloque1;
 
-import javax.swing.JOptionPane;
-
 public class Ejercicio4{
 
 	/**
