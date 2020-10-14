@@ -18,16 +18,16 @@ public class Ejercicio0{
 		int nummayor= 0; // Creamos una variable para el numero mayor
 		int array[] = new int[150];
 		for (int i = 0 ; i < array.length; i++) {
-			int c = (int)Math.round(Math.random()*100);
+			array[i] = (int)Math.round(Math.random()*100); // Formula para calcular el numero aleatorio
 			
-			System.out.println(array[i] = c);
+			System.out.println(array[i]); 
 			suma = suma + array[i];
 			media = suma / 150;
-			if (array[i] <	 nummenor) {
+			if (array[i] <	 nummenor) { // Buscando si es menor que el numero menor
 				nummenor=array[i];
 			}
 			else {
-				if (array[i] > nummayor) {
+				if (array[i] > nummayor) { // Buscando si el mayor que el numero mayor
 					nummayor=array[i];
 				}
 			}
