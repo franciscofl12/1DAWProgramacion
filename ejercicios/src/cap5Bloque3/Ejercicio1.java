@@ -25,7 +25,6 @@ public class Ejercicio1 {
 		boolean permutacion = true;
 		System.out.println(" ");
 		System.out.println("Ordenados");
-		int intt= 0;
 		while (permutacion == true) {
 			permutacion = false;
 			for (int i = 1; i < array.length; i++) {
