@@ -1,6 +1,6 @@
 package cap5Bloque3;
 
-public class Ejercicio3 {
+public class Ejercicio4 {
 
 	/**
 	 * 
