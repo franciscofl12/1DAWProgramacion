@@ -23,7 +23,7 @@ public class Ejercicio0{
 			System.out.println(array[i]); 
 			suma = suma + array[i];
 			media = suma / 150;
-			if (array[i] <	 nummenor) { // Buscando si es menor que el numero menor
+			if (array[i] < nummenor) { // Buscando si es menor que el numero menor
 				nummenor=array[i];
 			}
 			else {

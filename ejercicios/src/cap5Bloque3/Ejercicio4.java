@@ -17,29 +17,26 @@ public class Ejercicio4 {
 		int lims = 1000;
 
 		int array[] = new int[150];
+		int arrayx[] = new int[150];
 		System.out.println("Primera Linea de numeros.");
 		for (int i = 0; i < array.length; i++) {
 			array[i] = (int) Math.round(Math.random() * (lims - limi) + limi);
 			System.out.print(array[i] + ", ");
 		}
-		System.out.println(" ");
-		System.out.println("Ordenados");
-		int aux = 0;
-		int salto = array.length-1;
-		boolean shell = true;
-		while (shell == true) {
-			shell = false ;
-			salto = (salto/2);
-			for (int i = 0; i < array.length-1; i++) {
-				if (array[i] > array[salto + i]) {
-					aux = array[salto+i];
-					array[salto+i] = array[i];
-					array[i] = aux;
-					shell = true;
-				}
-			}
-			
-		}
+		System.out.println("\nOrdenados");
+		int aux,menor;
+
+		for (int i = 0; i < arrayx.length; i++) {
+	         menor = i;
+	         for (int c = i; c < arrayx.length; c++)
+	              if (array[c] < array[menor]) {
+	                  menor = c;
+				      aux = array[i];
+				      array[i] = array[menor];
+				      array[menor] = aux;
+	              }
+	     }
+		
 		for (int i = 0; i < array.length; i++) {
 			System.out.print(array[i] + ", ");
 		}

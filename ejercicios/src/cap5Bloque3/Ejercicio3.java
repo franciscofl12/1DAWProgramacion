@@ -22,15 +22,14 @@ public class Ejercicio3 {
 			array[i] = (int) Math.round(Math.random() * (lims - limi) + limi);
 			System.out.print(array[i] + ", ");
 		}
-		System.out.println(" ");
-		System.out.println("Ordenados");
+		System.out.println("\nOrdenados");
 		int aux = 0;
-		int salto = array.length-1;
+		int salto = array.length;
 		boolean shell = true;
 		while (shell == true) {
 			shell = false ;
 			salto = (salto/2);
-			for (int i = 0; i < array.length-1; i++) {
+			for (int i = 0; i < (array.length/2); i++) {
 				if (array[i] > array[salto + i]) {
 					aux = array[salto+i];
 					array[salto+i] = array[i];
