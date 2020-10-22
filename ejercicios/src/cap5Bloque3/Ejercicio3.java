@@ -24,23 +24,27 @@ public class Ejercicio3 {
 		}
 		System.out.println("\nOrdenados");
 		int aux = 0;
-		int salto = array.length;
+		int salto = array.length / 2;
 		boolean shell = true;
-		while (shell == true) {
-			shell = false ;
-			salto = (salto/2);
-			for (int i = 0; i < (array.length/2); i++) {
-				if (array[i] > array[salto + i]) {
-					aux = array[salto+i];
-					array[salto+i] = array[i];
-					array[i] = aux;
-					shell = true;
+		while (salto > 0) {
+			shell = true;
+			while (shell == true) {
+				shell = false;
+				for (int i = 0; i < (array.length / 2); i++) {
+					if (array[i] > array[salto + i]) {
+						aux = array[salto + i];
+						array[salto + i] = array[i];
+						array[i] = aux;
+						shell = true;
+					}
 				}
+	
 			}
-			
+			salto = (salto / 2);
 		}
+			
 		for (int i = 0; i < array.length; i++) {
 			System.out.print(array[i] + ", ");
 		}
-}
+	}
 }

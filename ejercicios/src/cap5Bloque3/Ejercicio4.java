@@ -25,17 +25,21 @@ public class Ejercicio4 {
 		}
 		System.out.println("\nOrdenados");
 		int aux,menor;
-
-		for (int i = 0; i < arrayx.length; i++) {
-	         menor = i;
-	         for (int c = i; c < arrayx.length; c++)
-	              if (array[c] < array[menor]) {
-	                  menor = c;
-				      aux = array[i];
-				      array[i] = array[menor];
-				      array[menor] = aux;
-	              }
-	     }
+		boolean cambios = true;
+		while (cambios == true) {
+			cambios = false;
+			for (int i = 0; i < arrayx.length; i++) {
+		         menor = i;
+		         for (int c = i; c < arrayx.length; c++)
+		              if (array[c] < array[menor]) {
+		                  menor = c;
+					      aux = array[i];
+					      array[i] = array[menor];
+					      array[menor] = aux;
+					      cambios=true;
+		              }
+		     }
+		}
 		
 		for (int i = 0; i < array.length; i++) {
 			System.out.print(array[i] + ", ");

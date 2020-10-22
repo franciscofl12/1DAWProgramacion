@@ -52,7 +52,7 @@ public class Ejercicio6 {
 					
 						for (int i = 0; i < array.length-1; i++) { // Iremos bajando y cambiando el valor de cada puesto del array
 							if (array.length > i) {
-									array[i] = array[i + 1];
+								array[i] = array[i + 1];
 							}
 						}
 					array[4] = aux; // Guardamos en el primner puesto el ultimo valor que guardamos anteriormente
