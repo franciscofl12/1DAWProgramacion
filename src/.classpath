@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<classpath>
+	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER"/>
+	<classpathentry excluding="Bloque1/|Bloque2/|Bloque3/|Bloque5/" kind="src" path=""/>
+	<classpathentry kind="src" path="Bloque1"/>
+	<classpathentry kind="src" path="Bloque2"/>
+	<classpathentry kind="src" path="Bloque3"/>
+	<classpathentry kind="src" path="Bloque5"/>
+	<classpathentry kind="output" path="bin"/>
+</classpath>
