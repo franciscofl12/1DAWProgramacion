@@ -13,7 +13,7 @@ public class Utils {
 		// System.out.println(getStringFromEntero(Integer.parseInt(JOptionPane.showInputDialog("Introduce
 		// un numero comprendido entre el 1 y 10"))));
 		// System.out.println(imprimeMinimoAMaximo(4,6,31));
-		// System.out.println(fibonacci(10));
+		   System.out.println(fibonacci(10));
 		// System.out.println(imprimeArray(5));
 		// System.out.println(recorte(5,10));
 
@@ -184,7 +184,7 @@ public class Utils {
 	 * el array y lo imprimirá en la consola.
 	 */
 
-	public static String fibonacci(int n1) {
+	public static int[] fibonacci(int n1) {
 		int Array[] = new int[n1];
 
 		Array[0] = 1;
@@ -198,9 +198,9 @@ public class Utils {
 			System.out.println(Array[i]);
 		}
 
-		String msg = ("Array Finalizada.");
+		//String msg = ("Array Finalizada.");
 
-		return msg;
+		return Array;
 	}
 
 	/****
