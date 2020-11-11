@@ -13,10 +13,27 @@ public class Utils {
 		// System.out.println(getStringFromEntero(Integer.parseInt(JOptionPane.showInputDialog("Introduce
 		// un numero comprendido entre el 1 y 10"))));
 		// System.out.println(imprimeMinimoAMaximo(4,6,31));
-		// System.out.println(fibonacci(10));
-		// System.out.println(imprimeArray(5));
-		// System.out.println(recorte(5,10));
-
+		
+		//		int arrayDevuelto[] = fibonacci(10);
+		//		for (int i = 0; i < arrayDevuelto.length ; i++) {
+		//			System.out.println(arrayDevuelto[i]);
+		//		}
+		
+		//		int arrayImprime[] = imprimeArray(10);
+		//		for (int i = 0; i < arrayImprime.length ; i++) {
+		//			System.out.println(arrayImprime[i]);
+		//		}
+		
+		//				int array[] = new int[10];
+		//				for (int i = 0 ; i < array.length ; i++) {
+		//					array[i] = i;
+		//				}
+		//				int devuelto[] = recorte(array, 1, 3);
+		//				for (int i = 0; i < devuelto.length ; i++) {
+		//					System.out.println(devuelto[i]);
+		//				}
+		
+		System.out.println(recursividad(0));
 	}
 
 	/****
@@ -184,7 +201,7 @@ public class Utils {
 	 * el array y lo imprimirá en la consola.
 	 */
 
-	public static String fibonacci(int n1) {
+	public static int[] fibonacci(int n1) {
 		int Array[] = new int[n1];
 
 		Array[0] = 1;
@@ -194,13 +211,7 @@ public class Utils {
 			Array[i] = Array[i - 1] + Array[i - 2];
 		}
 
-		for (int i = 0; i < n1; i++) {
-			System.out.println(Array[i]);
-		}
-
-		String msg = ("Array Finalizada.");
-
-		return msg;
+		return Array;
 	}
 
 	/****
@@ -209,7 +220,7 @@ public class Utils {
 	 * llamado "imprimeArray".
 	 */
 
-	public static String imprimeArray(int n1) {
+	public static int[] imprimeArray(int n1) {
 
 		int Array[] = new int[n1];
 
@@ -217,13 +228,7 @@ public class Utils {
 			Array[i] = (int) Math.round(Math.random() * (1000 - 1) + 1);
 		}
 
-		for (int i = 0; i < n1; i++) {
-			System.out.println(Array[i]);
-		}
-
-		String msg = ("Array Finalizada.");
-
-		return msg;
+		return Array;
 
 	}
 
@@ -234,21 +239,14 @@ public class Utils {
 	 * los dos índices recibidos
 	 */
 
-	public static String recorte(int n1, int n2) {
+	public static int[] recorte(int array[], int n1, int n2) {
+		int newArray[] = new int[n2-n1+1];
 
-		int Array[] = new int[n2];
-
-		for (int i = 0; i < Array.length; i++) {
-			Array[i] = (int) Math.round(Math.random() * (1000 - 1) + 1);
+		for (int i = 0; i < newArray.length; i++) {
+			newArray[i] = array[i+n1];
 		}
 
-		for (int i = n1; i < n2; i++) {
-			System.out.println(Array[i]);
-		}
-
-		String msg = ("Array Finalizada.");
-
-		return msg;
+		return newArray;
 
 	}
 
@@ -257,7 +255,15 @@ public class Utils {
 	 * para esto es que debe hacerse utilizando la recursividad.
 	 */
 	
-	public static String recursividad(String var) {
+	public static int recursividad(int recursividad) {
+		if (recursividad==100) {
+			return recursividad;
+		}
+		else {
+			System.out.println(recursividad);
+			return recursividad(recursividad + 1);
+		}
+		
 		
 	}
 
