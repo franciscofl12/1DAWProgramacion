@@ -36,6 +36,14 @@ public class Utils {
 
 	}
 
+
+	public static String imprimirArray(int[] array) {
+		for (int i = 0; i < array.length; i++) {
+			System.out.println(array[i]);
+		}
+		return "Array Finalizado.";
+	}
+	
 	/****
 	 * Método que reciba como parámetros de entrada tres valores enteros y uno
 	 * flotante. El método se llamará "media" y debe devolver la media aritmética de
@@ -43,7 +51,7 @@ public class Utils {
 	 * debe llamar a este otro método, con valores inventados por ti, e imprimir el
 	 * valor de la media en la consola de salida.
 	 */
-
+	
 	public static float media(int n1, int n2, int n3, float n4) {
 		float resultado = ((n1 + n2 + n3 + n4) / 4);
 		return resultado;

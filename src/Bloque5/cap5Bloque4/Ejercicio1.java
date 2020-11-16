@@ -17,8 +17,8 @@ public class Ejercicio1 {
 	 */
 
 	public static void arrays() {
-		int[] Array = new int[(int) Math.round(Math.random() * (100 - 0) + 100)]; // Creamos un array con una longitud
+		int[] array = new int[(int) Math.round(Math.random() * (100 - 0) + 100)]; // Creamos un array con una longitud
 																					// aleatoria
-		System.out.println(Utils.analizarArray(Array));
+		System.out.println(Utils.analizarArray(array));
 	}
 }

@@ -15,22 +15,24 @@ public class Ejercicio2 {
 	 */
 
 	public static void arrays() {
-		int[] Array = new int[20];
+		int[] array = new int[20];
 		int auxp = 0; // Variable auxiliar para mayores de 5
-		int contadorp = 0;
+		float contadorp = 0;
 		int auxm = 0; // Variable auxiliar para menores de 5
-		int contadorm = 0;
-		for (int i = 0; i < Array.length; i++) {
-			Array[i] = Utils.NumeroAleatorio(0, 10);
-			if (Array[i] >= 5) {
-				auxp = auxp + Array[i]; 
-				contadorp=contadorp+1;
+		float total = 0;
+		for (int i = 0; i < array.length; i++) {
+			array[i] = Utils.NumeroAleatorio(0, 10);
+			if (array[i] >= 5) {
+				auxp = auxp + array[i]; 
+				contadorp++; //Contamos si el numero es mayor que 5 para luego carcular
 			}
-			if (Array[i] < 5) {
-				auxm = auxm + Array[i]; 
-				contadorm=contadorm+1;
+			if (array[i] < 5) {
+				auxm = auxm + array[i];
 			}
+			total++;
 		}
+		System.out.println("Porcentaje de aprobados : " + ((contadorp/total)*100) + "%");
+		System.out.println("Porcentaje de suspensos : " + ((100)-(contadorp/total)*100) + "%");
 		
 	}
 }
