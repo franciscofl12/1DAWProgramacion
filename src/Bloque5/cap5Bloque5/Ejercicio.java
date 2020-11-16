@@ -57,7 +57,7 @@ public class Ejercicio {
  */
 
 public static String stringFromArray(int[] Array) {
-	String stringFromArray = null;
+	String stringFromArray = "";
 
 	for (int i = 0; i < Array.length; i++) {
 		stringFromArray = (stringFromArray + Array[i]);
