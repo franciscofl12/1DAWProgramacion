@@ -73,12 +73,6 @@ public class Utils {
 		return n3;
 	}
 
-	// Metodo que devuelve un Numero Aleatorio entre un valor inferior y superior
-	public static int NumeroAleatorio(int n1, int n2) {
-		int NumeroAleatorio = (int) Math.round(Math.random() * (n2 - n1) + n1);
-		return NumeroAleatorio;
-	}
-
 	/****
 	 * Método llamado "maximo" que devuelva el valor máximo de dos números enteros
 	 * recibidos como argumentos de entrada. El método main pedirá dos números al
