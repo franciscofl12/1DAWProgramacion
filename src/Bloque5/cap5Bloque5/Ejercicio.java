@@ -24,7 +24,7 @@ public class Ejercicio {
 		// for (int i = 0; i < Array.length; i++) {
 		// Array[i] = i;
 		// }
-		// int[] ArrayMostrar = addInteger(Array,10);
+		// int[] ArrayMostrar = addInteger(Array, 10);
 		// for (int i = 0; i < ArrayMostrar.length; i++) {
 		// System.out.println(ArrayMostrar[i]);
 		// }
@@ -38,11 +38,11 @@ public class Ejercicio {
 
 		// int[] Array = new int[10];
 		// for (int i = 0; i < Array.length; i++) {
-		// Array[i] = NumeroAleatorio(0,5);
+		// Array[i] = NumeroAleatorio(0, 5);
 		// System.out.println(Array[i]);
 		// }
 		// System.out.println("\nNumeros removido (3) : ");
-		// int[] newArray = removeInteger(Array,3);
+		// int[] newArray = removeInteger(Array, 3);
 		// for (int i = 0; i < newArray.length; i++) {
 		// System.out.println(newArray[i]);
 		// }
@@ -153,7 +153,7 @@ public class Ejercicio {
 
 		for (int i = 0; i < Array.length; i++) {
 			if (Array[i] == num)
-				aux2 = aux2 + 1;
+				aux2 ++;
 			if (Array[i] != num)
 				newArray[i - aux2] = Array[i];
 		}

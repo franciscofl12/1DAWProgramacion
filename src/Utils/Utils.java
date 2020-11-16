@@ -1,3 +1,4 @@
+package Utils;
 import javax.swing.JOptionPane;
 
 public class Utils {
@@ -261,6 +262,21 @@ public class Utils {
 			System.out.println(recursividad);
 			return recursividad(recursividad + 1);
 		}
-
 	}
+	
+	// Metodo que devuelve un Numero Aleatorio entre un valor inferior y superior
+	public static int NumeroAleatorio(int n1, int n2) {
+		int NumeroAleatorio = (int) Math.round(Math.random() * (n2 - n1) + n1);
+		return NumeroAleatorio;
+	}
+	
+	public static int analizarArray(int[] Array) {
+		for (int i = 0; i < Array.length; i++) {
+			Array[i] = (int) Math.round(Math.random() * (100 - 0) + 0);
+		}
+		
+		if (Array.length%2 != 0 ) return (Array[Array.length/2]);
+		else return (-1);
+	}
+	
 }
