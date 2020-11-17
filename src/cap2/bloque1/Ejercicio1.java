@@ -1,9 +1,8 @@
-
-package cap2Bloque1;
+package cap2.bloque1;
 
 import javax.swing.JOptionPane;
 
-public class Ejercicio2{
+public class Ejercicio1{
 
 	/**
 	 * 
@@ -20,11 +19,11 @@ public class Ejercicio2{
 		String var2 = JOptionPane.showInputDialog("Introduzca otro numero: "); // Obtenemos valor para los calculos necesarios
 		int num2 = Integer.parseInt(var2);
 		if (num1!=num2) {
-			if (num2>num1) {
-				System.out.println("El numero menor es: "+ num1);
+			if (num1>num2) {
+				System.out.println("El numero mayor es: "+ num1);
 			}
 			else {
-				System.out.println("El numero menor es: "+ num2);
+				System.out.println("El numero mayor es: "+ num2);
 			}
 		}
 		else {
@@ -33,6 +32,4 @@ public class Ejercicio2{
 	}
 }
 	
-
-
 
