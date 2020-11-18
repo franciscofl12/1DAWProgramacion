@@ -287,4 +287,22 @@ public class Utils {
 		else return (-1);
 	}
 	
+	public static int[][] rellenarMatriz(int[][] matriz, int menor, int mayor) {
+		for (int i = 0; i < matriz.length; i++) {
+			for (int j = 0; j < matriz.length; j++) {
+				matriz[i][j] = Utils.NumeroAleatorio(menor, mayor);
+			}
+		}
+		return matriz;
+	}
+	
+	public static String imprimirMatriz(int[][] matriz) {
+		for (int i = 0; i < matriz.length; i++) {
+			for (int j = 0; j < matriz.length; j++) {
+				System.out.print(matriz[i][j] + " \t");
+			}
+			System.out.println("\n");
+		}
+		return "Matriz Imprimada";
+	}
 }
