@@ -1,4 +1,4 @@
-package Utils;
+package utils;
 import javax.swing.JOptionPane;
 
 public class Utils {
@@ -39,7 +39,7 @@ public class Utils {
 
 	public static String imprimirArray(int[] array) {
 		for (int i = 0; i < array.length; i++) {
-			System.out.println(array[i]);
+			System.out.print(array[i] + " , ");
 		}
 		return "Array Finalizado.";
 	}
@@ -298,7 +298,7 @@ public class Utils {
 	
 	public static String imprimirMatriz(int[][] matriz) {
 		for (int i = 0; i < matriz.length; i++) {
-			for (int j = 0; j < matriz.length; j++) {
+			for (int j = 0; j < matriz[i].length; j++) {
 				System.out.print(matriz[i][j] + " \t");
 			}
 			System.out.println("\n");

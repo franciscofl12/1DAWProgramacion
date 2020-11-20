@@ -1,6 +1,6 @@
 package cap5.bloque4;
 
-import Utils.*;
+import utils.*;
 
 public class Ejercicio2 {
 
