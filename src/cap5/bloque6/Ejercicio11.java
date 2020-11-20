@@ -16,7 +16,7 @@ public class Ejercicio11 {
 		if (borrar>var) System.out.println("No se puede borrar esa linea");
 		else {
 			System.out.println("Matriz linea borrada " + borrar);
-			Utils.imprimirMatriz(matrizLineaBorrada(matriz,var,var2,borrar));
+			Utils.imprimirMatriz(matrizLineaBorrada(matriz,borrar));
 		}
 	}
 
@@ -27,8 +27,8 @@ public class Ejercicio11 {
 	 * representa una fila de la matriz, y devuelve una nueva matriz.
 	 */
 	
-	public static int[][] matrizLineaBorrada(int[][] matriz, int var,int var2,int borrar) {
-		int[][] newMatriz = new int[var-1][var2];
+	public static int[][] matrizLineaBorrada(int[][] matriz,int borrar) {
+		int[][] newMatriz = new int[matriz.length-1][matriz[0].length];
 		int aux = 0;
 		
 		for (int i = 0; i < matriz.length; i++) {
@@ -37,7 +37,7 @@ public class Ejercicio11 {
 					newMatriz[i-aux][j] = matriz[i][j];
 				}
 			}
-			aux ++;
+			if (borrar==i)aux ++;
 		}
 		return newMatriz;
 	}

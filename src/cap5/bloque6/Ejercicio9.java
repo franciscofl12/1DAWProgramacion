@@ -13,7 +13,7 @@ public class Ejercicio9 {
 		Ejercicio1y2.rellenarMatriz(matriz, 0, 1);
 		Utils.imprimirMatriz(matriz);
 		System.out.println("Matriz Traspuesta\n");
-		Utils.imprimirMatriz(matrices(matriz, var, var2));
+		Utils.imprimirMatriz(matrices(matriz));
 	}
 
 	/****
@@ -25,8 +25,8 @@ public class Ejercicio9 {
 	 * @param var2
 	 * @return
 	 */
-	public static int[][] matrices(int[][] matriz, int var, int var2) {
-		int[][] newMatriz = new int[var2][var];
+	public static int[][] matrices(int[][] matriz) {
+		int[][] newMatriz = new int[matriz.length][matriz[0].length];
 		for (int i = 0; i < matriz.length; i++) {
 			for (int j = 0; j < matriz[i].length; j++) {
 				newMatriz[j][i] = matriz[i][j];

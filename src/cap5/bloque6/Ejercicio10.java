@@ -13,7 +13,7 @@ public class Ejercicio10 {
 		Ejercicio1y2.rellenarMatriz(matriz, -3, 3);
 		Utils.imprimirMatriz(matriz);
 		System.out.println("Matriz Opuesta\n");
-		Utils.imprimirMatriz(opuesta(matriz,var,var2));
+		Utils.imprimirMatriz(opuesta(matriz));
 	}
 
 	/****
@@ -21,8 +21,8 @@ public class Ejercicio10 {
 	 * recibe una matriz y devuelve otra, la opuesta.
 	 */
 	
-	public static int[][] opuesta(int[][] matriz, int var, int var2) {
-		int[][] newMatriz = new int[var][var2];
+	public static int[][] opuesta(int[][] matriz) {
+		int[][] newMatriz = new int[matriz.length][matriz[0].length];
 		for (int i = 0; i < newMatriz.length; i++) {
 			for (int j = 0; j < newMatriz[i].length; j++) {
 				newMatriz[i][j] = (matriz[i][j]*-1);
