@@ -31,7 +31,7 @@ public class Ejercicio8 {
 				}
 		}	
 	}
-	if (igual == false) return false;
+	if (!igual) return false;
 	else return true;
 	}
 }

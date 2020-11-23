@@ -26,7 +26,7 @@ public class Ejercicio9 {
 	 * @return
 	 */
 	public static int[][] matrices(int[][] matriz) {
-		int[][] newMatriz = new int[matriz.length][matriz[0].length];
+		int[][] newMatriz = new int[matriz[0].length][matriz.length];
 		for (int i = 0; i < matriz.length; i++) {
 			for (int j = 0; j < matriz[i].length; j++) {
 				newMatriz[j][i] = matriz[i][j];
