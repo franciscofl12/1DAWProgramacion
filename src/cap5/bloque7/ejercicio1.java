@@ -27,6 +27,8 @@ public class ejercicio1 {
       g) "Imprimir el fichero". Mostrarás cada línea del fichero ficticio, aparecerá numerada en la consola.
 	 * @param args
 	 */
+	
+	@SuppressWarnings("unused")
 	public static void main(String[] args) {
 		// Declaro variables necesarias
 		int opcion;
@@ -39,7 +41,8 @@ public class ejercicio1 {
 		do {
 			// Llamo a mostrar el menú y pedir una opción al usuario.
 			opcion = menu();
-		
+			
+			List<String> ficheroaux = null;
 			// Cada caso en función de la opción elegida por el usuario
 			switch (opcion) {
 			case (0): // Ha elegido abandonar la aplicación
@@ -58,7 +61,8 @@ public class ejercicio1 {
 				removeLine(fichero);
 				break;
 			case 5: 
-				List<String> ficheroaux = cutLines(fichero);
+				ficheroaux = cutLines(fichero);
+				break;
 			case 6:
 				if (ficheroaux != null) {
 					pasteLines(fichero,ficheroaux);
