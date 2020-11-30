@@ -105,9 +105,8 @@ public class ejercicio2 {
 	public static void randomCreate(List<Integer> lista, int num,int num1, int num2) {
 		lista.clear();
 		
-		for (int i = 0; i < lista.size(); i++) {
+		for (int i = 0; i < num; i++) {
 			lista.add(Utils.NumeroAleatorio(num1, num2));
-			System.out.println(lista.get(i));
 		}
 		
 	}
