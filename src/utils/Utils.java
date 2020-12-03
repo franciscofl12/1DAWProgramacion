@@ -44,6 +44,20 @@ public class Utils {
 		return "Array Finalizado.";
 	}
 	
+	public static boolean esPrimo(int numero) {
+		boolean primo = false;
+		int contador = 0;
+		for(int i = numero; i > 0; i--){
+		    if(numero % i == 0 ){
+		        contador++;
+		    }
+		}
+		if(contador == 2){
+		    primo = true;
+		}
+		return primo;
+	}
+	
 	/****
 	 * Método que reciba como parámetros de entrada tres valores enteros y uno
 	 * flotante. El método se llamará "media" y debe devolver la media aritmética de
@@ -278,6 +292,12 @@ public class Utils {
 		return NumeroAleatorio;
 	}
 	
+	/****
+	 * 
+	 * @param Array
+	 * @return
+	 */
+	
 	public static int analizarArray(int[] Array) {
 		for (int i = 0; i < Array.length; i++) {
 			Array[i] = (int) Math.round(Math.random() * (100 - 0) + 0);
@@ -287,14 +307,27 @@ public class Utils {
 		else return (-1);
 	}
 	
+	/****
+	 * 
+	 * @param matriz
+	 * @param menor
+	 * @param mayor
+	 * @return
+	 */
 	public static int[][] rellenarMatriz(int[][] matriz, int menor, int mayor) {
 		for (int i = 0; i < matriz.length; i++) {
-			for (int j = 0; j < matriz.length; j++) {
+			for (int j = 0; j < matriz[i].length; j++) {
 				matriz[i][j] = Utils.NumeroAleatorio(menor, mayor);
 			}
 		}
 		return matriz;
 	}
+	
+	/****
+	 * 
+	 * @param matriz
+	 * @return
+	 */
 	
 	public static String imprimirMatriz(int[][] matriz) {
 		for (int i = 0; i < matriz.length; i++) {
@@ -304,5 +337,25 @@ public class Utils {
 			System.out.println("\n");
 		}
 		return "Matriz Imprimada";
+	}
+	
+	/****
+	 * 
+	 * @param Array
+	 * @return
+	 */
+	
+	public static int[][] matrizFromArray(int[] Array) {
+		int num = (int) Math.sqrt(Array.length);
+		int contador = 0;
+		
+		int[][] matriz = new int[num][num];
+		for (int i = 0; i < matriz.length; i++) {
+			for (int j = 0; j < matriz[i].length; j++) {
+				matriz[i][j] = Array[contador];
+				contador ++;
+			}
+		}
+		return matriz;
 	}
 }
