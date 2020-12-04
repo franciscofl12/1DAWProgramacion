@@ -5,6 +5,11 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class Cromos {
+	
+	/****
+	 * 
+	 * @param args
+	 */
 
 	public static void main(String[] args) {
 		CromoBaloncesto b1 = new CromoBaloncesto("Antonio", 200, 100, 40);
@@ -24,7 +29,9 @@ public class Cromos {
 		for (int i = 0; i < listaCromos.size(); i++) {
 			System.out.println(listaCromos.get(i).toString());
 		}
-
+		
+		// Metodo de ordenación burbuja
+		
 		boolean permutacion = true;
 		System.out.println(" ");
 		System.out.println("Ordenado por puntos: ");
