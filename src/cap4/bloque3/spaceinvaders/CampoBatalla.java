@@ -96,13 +96,17 @@ public class CampoBatalla {
 	
 	public static void imprimirHumano() {
 		for (int i = 0; i < Humanos.length; i++) {
-			System.out.println(Humanos[i].toString() + "\n");
+			if (Humanos[i].isVivo() == true) {
+				System.out.println(Humanos[i].toString() + "\n");
+			}
 		}
 	}
 	
 	public static void imprimirMalvado() {
 		for (int i = 0; i < Malvados.length; i++) {
-			System.out.println(Malvados[i].toString() + "\n");
+			if (Malvados[i].isVivo() == true) {
+				System.out.println(Malvados[i].toString() + "\n");
+			}
 		}
 	}
 	
@@ -128,21 +132,24 @@ public class CampoBatalla {
 	
 	
 	public static void main(String[] args) {
+		int ronda = 0;
 		CampoBatalla Batalla = new CampoBatalla();
 		while (todosMuertosMalvados() == false && todosMuertosHumanos() == false) {
 			dispararAHumano();
 			dispararAMalvado();
+			System.out.println("Batalla - Ronda " + ronda + "\n");
 			imprimirHumano();
 			imprimirMalvado();
 			//JOptionPane.showInputDialog("Continua el juego. ");
+			ronda++;
 		}
 		if (todosMuertosMalvados() == true) {
 			System.out.println("\n\nHan ganado los humanos");
 			System.out.println("El malvado mas disparado ha sido : " + masDisparadoMalvado() + " con " + masDificilMalvado + " tiros."); 
 		}
 		if (todosMuertosHumanos() == true) {
-			System.out.println("\n\nHan ganado los humanos");
-			System.out.println("El malvado mas disparado ha sido : " + masDisparadoHumano() + " con " + masDificilHumano + " tiros."); 
+			System.out.println("\n\nHan ganado los malvados");
+			System.out.println("El humano mas disparado ha sido : " + masDisparadoHumano() + " con " + masDificilHumano + " tiros."); 
 		}
 	}
 
