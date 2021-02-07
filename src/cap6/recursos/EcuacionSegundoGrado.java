@@ -1,4 +1,4 @@
-package cap6.Recursos;
+package cap6.recursos;
 
 import java.util.Scanner;
 
