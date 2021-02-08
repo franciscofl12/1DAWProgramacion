@@ -1,4 +1,4 @@
-package cap6.recursos;
+package cap6.math;
 
 public class NumeroPi {
 	
