@@ -1,5 +1,7 @@
 package cap6.wrappers;
 
+import java.util.Calendar;
+
 import javax.swing.JOptionPane;
 
 public class Ejercicio2 {
@@ -24,7 +26,6 @@ public class Ejercicio2 {
 				System.out.println("Contrasena no valida, vuelve a introducir una contrasena segura.");
 			}
 		}
-		
 		System.out.println("Es una contrasena valida");
 	}
 	
