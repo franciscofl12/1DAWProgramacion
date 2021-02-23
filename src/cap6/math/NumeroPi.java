@@ -12,6 +12,7 @@ public class NumeroPi {
 			piAuxiliar += (signoAuxiliar * 4.0 /x);
 			signoAuxiliar *= -1;
 			x += 2;
+			System.out.println(piAuxiliar);
 			
 		} while (Math.abs(Math.PI - piAuxiliar) > 0.00001);
 		
