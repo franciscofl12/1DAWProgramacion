@@ -92,17 +92,17 @@ public class Ejercicio0 {
 			Statement s = (Statement) conn.createStatement();
 		   
 			// Necesitamos obtener un acceso a la BBDD, eso se materializa en un objeto de tipo Connection, al cual
-			// le tenemos que pasar los par�metros de conexi�n.
+			// le tenemos que pasar los  par�metros de conexi�n.
 			Connection conexion = (Connection) DriverManager.getConnection ("jdbc:mysql://localhost/tutorialjavacoches?serverTimezone=UTC","java", "1234");
 			
 			mostrarLista();
 			
-			String id = JOptionPane.showInputDialog("Introduce id que quieres eliminar");
+			int id = Integer.parseInt(JOptionPane.showInputDialog("Introduce id que quieres eliminar"));
 			
 			String sql = "DELETE FROM tutorialjavacoches.fabricante " + " WHERE id= " + id ;
-			s.executeUpdate(sql);
+			int registrosAfectados = s.executeUpdate(sql);
 			
-			System.out.println("Dato eliminado.");
+			System.out.println("Datos eliminados. " + registrosAfectados + " \n");
 			s.close();
 			conexion.close();
 		}
@@ -130,7 +130,7 @@ public class Ejercicio0 {
 			
 			mostrarLista();
 			
-			String id = JOptionPane.showInputDialog("Introduce id que quieres editar");
+			int id = Integer.parseInt(JOptionPane.showInputDialog("Introduce id que quieres editar"));
 			String cif = JOptionPane.showInputDialog("Introduce el CIF del fabricante");
 			String nombre = JOptionPane.showInputDialog("Introduce el nombre del fabricante");
 		
@@ -139,7 +139,7 @@ public class Ejercicio0 {
 			String sqlnombre = "UPDATE tutorialjavacoches.fabricante " +  "set nombre='" + nombre +"'" + " WHERE id= " + id;
 			s.executeUpdate(sqlnombre);
 			
-			System.out.println("Cambio realizado.");
+			System.out.println("Cambio realizado.\n");
 			s.close();
 			conexion.close();
 		}
@@ -151,11 +151,6 @@ public class Ejercicio0 {
 			System.out.println("Error en la ejecuci�n SQL: " + ex.getMessage());
 			ex.printStackTrace();
 		}
-	}
-	
-	private static int parseInt(String showInputDialog) {
-		// TODO Auto-generated method stub
-		return 0;
 	}
 
 	private static void agregarALista(Connection conn) {
@@ -177,7 +172,7 @@ public class Ejercicio0 {
 					"VALUES  (" + nextIdEnTabla(conn, "fabricante") + ", '" + cif + "', '" + nombre + "')";
 			s.executeUpdate(sql);
 			
-			System.out.println("Dato agregado.");
+			System.out.println("Dato agregado.\n");
 			s.close();
 			conexion.close();
 		}
