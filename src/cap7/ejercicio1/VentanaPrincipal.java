@@ -32,8 +32,8 @@ public class VentanaPrincipal extends JFrame {
 	private JTabbedPane getTabbedPane() {
 		JTabbedPane tabbedPane = new JTabbedPane();
 
-		tabbedPane.add("Cliente", new VentanaCliente());
-		tabbedPane.add("Cliente", new VentanaCliente());
+		tabbedPane.add("Cliente", new VentanaCoche());
+		tabbedPane.add("Cliente", new VentanaCoche());
 		
 
 		return tabbedPane;

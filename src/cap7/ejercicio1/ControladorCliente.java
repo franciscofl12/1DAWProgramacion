@@ -6,18 +6,18 @@ import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.sql.Statement;
 
-public class Controlador {
+public class ControladorCliente {
 
-	private static Controlador instance = null;
+	private static ControladorCliente instance = null;
 	public Connection conn = null;
 	
 	/**
 	 * 
 	 * @return
 	 */
-	public static Controlador getInstance () {
+	public static ControladorCliente getInstance () {
 		if (instance == null) {
-			instance = new Controlador();
+			instance = new ControladorCliente();
 		}
 		return instance;
 	}
@@ -25,7 +25,7 @@ public class Controlador {
 	/**
 	 * 
 	 */
-	public Controlador() {
+	public ControladorCliente() {
 		
 		try {
 			Class.forName("com.mysql.cj.jdbc.Driver");
