@@ -47,23 +47,23 @@ public class Ejercicio0 {
 	
 	private static void mostrarLista() {
 		try {
-			// A trav�s de la siguiente l�nea comprobamos si tenemos acceso al driver MySQL, si no fuera as�
+			// A travós de la siguiente lónea comprobamos si tenemos acceso al driver MySQL, si no fuera asó
 			// no podemos trabajar con esa BBDD.
 			Class.forName("com.mysql.cj.jdbc.Driver");
 		   
 			// Necesitamos obtener un acceso a la BBDD, eso se materializa en un objeto de tipo Connection, al cual
-			// le tenemos que pasar los par�metros de conexi�n.
+			// le tenemos que pasar los parómetros de conexión.
 			Connection conexion = (Connection) DriverManager.getConnection ("jdbc:mysql://localhost/tutorialjavacoches?serverTimezone=UTC","java", "1234");
 		   
 			
 			// Para poder ejecutar una consulta necesitamos utilizar un objeto de tipo Statement
 			Statement s = (Statement) conexion.createStatement(); 
 			
-			// La ejecuci�n de la consulta se realiza a trav�s del objeto Statement y se recibe en forma de objeto
+			// La ejecución de la consulta se realiza a travós del objeto Statement y se recibe en forma de objeto
 			// de tipo ResultSet, que puede ser navegado para descubrir todos los registros obtenidos por la consulta
 			ResultSet rs = s.executeQuery ("select * from fabricante");
 		   
-			// Navegaci�n del objeto ResultSet
+			// Navegación del objeto ResultSet
 			while (rs.next()) { 
 				System.out.println (rs.getInt("id") + " " + rs.getString (2)+ 
 						" " + rs.getString(3) + " \n"); 
@@ -78,21 +78,21 @@ public class Ejercicio0 {
 			ex.printStackTrace();
 		}
 		catch (SQLException ex) {
-			System.out.println("Error en la ejecuci�n SQL: " + ex.getMessage());
+			System.out.println("Error en la ejecución SQL: " + ex.getMessage());
 			ex.printStackTrace();
 		}
 	}
 	
 	private static void eliminarLista(Connection conn) {
 		try {
-			// A trav�s de la siguiente l�nea comprobamos si tenemos acceso al driver MySQL, si no fuera as�
+			// A travós de la siguiente lónea comprobamos si tenemos acceso al driver MySQL, si no fuera asó
 			// no podemos trabajar con esa BBDD.
 			Class.forName("com.mysql.cj.jdbc.Driver");
 			
 			Statement s = (Statement) conn.createStatement();
 		   
 			// Necesitamos obtener un acceso a la BBDD, eso se materializa en un objeto de tipo Connection, al cual
-			// le tenemos que pasar los  par�metros de conexi�n.
+			// le tenemos que pasar los  parómetros de conexión.
 			Connection conexion = (Connection) DriverManager.getConnection ("jdbc:mysql://localhost/tutorialjavacoches?serverTimezone=UTC","java", "1234");
 			
 			mostrarLista();
@@ -111,21 +111,21 @@ public class Ejercicio0 {
 			ex.printStackTrace();
 		}
 		catch (SQLException ex) {
-			System.out.println("Error en la ejecuci�n SQL: " + ex.getMessage());
+			System.out.println("Error en la ejecución SQL: " + ex.getMessage());
 			ex.printStackTrace();
 		}
 	}
 	
 	private static void editarLista(Connection conn) {
 		try {
-			// A trav�s de la siguiente l�nea comprobamos si tenemos acceso al driver MySQL, si no fuera as�
+			// A travós de la siguiente lónea comprobamos si tenemos acceso al driver MySQL, si no fuera asó
 			// no podemos trabajar con esa BBDD.
 			Class.forName("com.mysql.cj.jdbc.Driver");
 			
 			Statement s = (Statement) conn.createStatement();
 		   
 			// Necesitamos obtener un acceso a la BBDD, eso se materializa en un objeto de tipo Connection, al cual
-			// le tenemos que pasar los par�metros de conexi�n.
+			// le tenemos que pasar los parómetros de conexión.
 			Connection conexion = (Connection) DriverManager.getConnection ("jdbc:mysql://localhost/tutorialjavacoches?serverTimezone=UTC","java", "1234");
 			
 			mostrarLista();
@@ -148,21 +148,21 @@ public class Ejercicio0 {
 			ex.printStackTrace();
 		}
 		catch (SQLException ex) {
-			System.out.println("Error en la ejecuci�n SQL: " + ex.getMessage());
+			System.out.println("Error en la ejecución SQL: " + ex.getMessage());
 			ex.printStackTrace();
 		}
 	}
 
 	private static void agregarALista(Connection conn) {
 		try {
-			// A trav�s de la siguiente l�nea comprobamos si tenemos acceso al driver MySQL, si no fuera as�
+			// A travós de la siguiente lónea comprobamos si tenemos acceso al driver MySQL, si no fuera asó
 			// no podemos trabajar con esa BBDD.
 			Class.forName("com.mysql.cj.jdbc.Driver");
 			
 			Statement s = (Statement) conn.createStatement();
 		   
 			// Necesitamos obtener un acceso a la BBDD, eso se materializa en un objeto de tipo Connection, al cual
-			// le tenemos que pasar los par�metros de conexi�n.
+			// le tenemos que pasar los parómetros de conexión.
 			Connection conexion = (Connection) DriverManager.getConnection ("jdbc:mysql://localhost/tutorialjavacoches?serverTimezone=UTC","java", "1234");
 			
 			String cif = JOptionPane.showInputDialog("Introduce el CIF del fabricante");
@@ -181,7 +181,7 @@ public class Ejercicio0 {
 			ex.printStackTrace();
 		}
 		catch (SQLException ex) {
-			System.out.println("Error en la ejecuci�n SQL: " + ex.getMessage());
+			System.out.println("Error en la ejecución SQL: " + ex.getMessage());
 			ex.printStackTrace();
 		}
 	}
