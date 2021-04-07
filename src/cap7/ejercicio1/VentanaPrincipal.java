@@ -17,7 +17,7 @@ public class VentanaPrincipal extends JFrame {
 	 */
 	public VentanaPrincipal() {
 		super("Gestión Concesionario");
-		this.setBounds(0, 0, 800, 800);
+		this.setBounds(0, 0, 500, 500);
 		this.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);;
 
 		// Establezco el panel principal de la aplicaci�n y la barra de herramientas
@@ -33,7 +33,8 @@ public class VentanaPrincipal extends JFrame {
 		JTabbedPane tabbedPane = new JTabbedPane();
 
 		tabbedPane.add("Cliente", new VentanaCoche());
-		tabbedPane.add("Cliente", new VentanaCoche());
+		tabbedPane.add("Fabricante", new VentanaFabricante());
+		tabbedPane.add("Coche", new VentanaCoche());
 		
 
 		return tabbedPane;

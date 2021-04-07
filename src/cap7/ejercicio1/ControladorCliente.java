@@ -5,6 +5,8 @@ import java.sql.DriverManager;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.sql.Statement;
+import java.util.ArrayList;
+import java.util.List;
 
 public class ControladorCliente {
 
@@ -80,7 +82,7 @@ public class ControladorCliente {
 				f.setApellidos(rs.getString("apellidos"));
 				f.setLocalidad(rs.getString("localidad"));
 				f.setDni(rs.getString("dniNie"));
-				f.setfechaNac(rs.getString("fechaNac"));
+				f.setfechaNac(rs.getString("efechaNac"));
 			}
 		}
 		catch (Exception ex) {
@@ -139,6 +141,29 @@ public class ControladorCliente {
 			ex.printStackTrace();
 		}
 		return f;
+	}
+	
+	public List<Cliente> findAll () {
+		List<Cliente> clientes = new ArrayList<Cliente>();
+		try {
+			Statement s = this.conn.createStatement();
+			ResultSet rs =  s.executeQuery("select * from cliente");
+			while (rs.next()) {
+				Cliente c = new Cliente();
+				c.setId(rs.getInt("id"));
+				c.setNombre(rs.getString("nombre"));
+				c.setApellidos(rs.getString("apellidos"));
+				c.setLocalidad(rs.getString("localidad"));
+				c.setDni(rs.getString("dniNie"));
+				c.setfechaNac(rs.getString("fechaNac"));
+				// Agrego el fabricante a la lista
+				clientes.add(c);
+			}
+		}
+		catch (Exception ex) {
+			ex.printStackTrace();
+		}
+		return clientes;
 	}
 	
 	/**

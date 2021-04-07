@@ -1,4 +1,4 @@
-package ejercicio1;
+package cap7.ejercicio1;
 
 import javax.swing.JPanel;
 import java.awt.GridBagLayout;
